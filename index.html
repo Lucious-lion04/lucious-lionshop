@@ -241,7 +241,7 @@ button[type="submit"] {
 <body>
 
     <header>
-        <h1>OldestFlux</h1>
+        <h1>OldestStream</h1>
         <nav>
             <ul>
                 <li><button id="accueilButton">Accueil</button></li>
@@ -265,7 +265,6 @@ button[type="submit"] {
  <main>
 
      
-    
     <section id="featured">
     <h2>En ce moment sur OldestStream</h2>
     <div class="featured-info">
@@ -273,74 +272,128 @@ button[type="submit"] {
         <span class="work-in-progress">Site en développement</span>
     </div>
 
-        
+        <div class="support-box">
+        <p>Soutenez FluxOldest en regardant une courte vidéo.</p>
+        <button class="play-btn" id="playAdBtn">Play</button>
+        </div>
     
 </section>
  
-     
-     
-     <div id="videos"> <!-- Vidéo d'accueil --> <div id="welcomeVideo" class="categoryVideos"> <h2>Godzilla x Kong : Le Nouvel Empire
-il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo d'accueil --> <iframe src="https://mega.nz/embed/eI1TQCpD#YqvYrfUQBbVi6hmdOo2xJKF1JPOm5tMypln9g7lk65o" frameborder="0" allowfullscreen></iframe> 
-    <div class="bande-noire">
-    
-            👻OLDEST🇯🇲 
-                        <br />
-                    🥰🥰🥰🥰🥰🥰🥰🥰🥰👈
-     </p>   
-    </div>
-    
-    <div class="overlay"> <button class="watch-button" data-category="welcome">Regarder</button> </div> </div> <p class="description">Description : Le tout-puissant Kong et le redoutable Godzilla unissent leurs forces contre une terrible menace encore secrète qui risque de les anéantir et qui met en danger la survie même de l’espèce humaine. GODZILLA X KONG : LE NOUVEL EMPIRE remonte à l’origine des deux titans et aux mystères de Skull Island, tout en révélant le combat mythique qui a contribué à façonner ces deux créatures hors du commun et lié leur sort à celui de l’homme pour toujours…</p> <div class="video-info"> <span class="views">500 vues</span> <span class="duration">3:45</span> </div> <div class="rating"> <span>Note : </span> <span class="stars">★★★★☆</span> <span class="user-review">Avis : Excellente vidéo, très instructive.</span> </div> </div>
-         
-         <!-- Section Action -->
-         <div id="actionVideos" class="categoryVideos"> <h2>Atlas Shepherd ajouté récent il y a 5 jour.</h2> <div class="video-container"> <iframe src="https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo" frameborder="0" allowfullscreen></iframe> 
-             
+
+
+<div id="videos">
+    <!-- Vidéo d'accueil -->
+    <div id="welcomeVideo" class="categoryVideos">
+        <h2>Vidéo d'Accueil</h2>
+        <div class="video-container">
+            <iframe src="https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY" frameborder="0" allowfullscreen></iframe>
             <div class="bande-noire">
-           👻OLDEST🇯🇲
-                        <br />
-                        il y a 5 mois.
-</p>
-            </div> 
-             
-             
-             <div class="overlay"> <button class="watch-button" data-category="action">Regarder</button> </div> </div> <p class="description">Description : Brillante analyste de données, Atlas Shepherd est misanthrope et se méfie totalement de l’intelligence artificielle. Tandis qu’elle se lance dans une mission destinée à capturer un robot rebelle, elle comprend qu’elle a déjà eu affaire à cette mystérieuse machine par le passé. Alors que la mission ne se déroule pas comme prévu, il ne reste plus à Atlas qu’à faire enfin confiance à l’IA si elle veut sauver l’avenir de l’humanité...</p> <div class="video-info"> <span class="views">1000 vues</span> <span class="duration">2:30</span> </div> <div class="rating"> <span>Note : </span> <span class="stars">★★★☆☆</span> <span class="user-review">Avis : Scènes d'action impressionnantes.</span> </div> </div> 
-         
-         <!-- Section Aventure --> <div id="aventureVideos" class="categoryVideos"> <h2>Vidéos d'Aventure</h2> <div class="video-container"> <iframe src="" frameborder="0" allowfullscreen></iframe> 
-             <div class="bande-noire">
-            👻OLDEST🇯🇲 
-                        <br />
-                        bientôt disponible !
-</p>
-             </div>
-             
-             <div class="overlay"> <button class="watch-button" data-category="aventure">Regarder</button> </div> </div> <p class="description">Description de la vidéo d'aventure</p> <div class="video-info"> <span class="views">750 vues</span> <span class="duration">4:15</span> </div> <div class="rating"> <span>Note : </span> <span class="stars">★★★★☆</span> <span class="user-review">Avis : Une aventure palpitante du début à la fin.</span> </div> </div> <!-- Section Comédie --> <div id="comedyVideos" class="categoryVideos"> <h2>Vidéos de Comédie</h2> <div class="video-container"> <iframe src="" frameborder="0" allowfullscreen></iframe> 
-             <div class="bande-noire">
+                👻OLDEST🇯🇲
+                <br />
+                🥰🥰🥰🥰🥰🥰🥰🥰🥰👈
+            </div>
+            <div class="overlay" id="videoOverlay">
+                <button class="watch-button" id="watchButton" data-category="welcome">Regarder</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+<!-- Section Action -->
+<div id="actionVideos" class="categoryVideos" style="display: none;">
+    <h2>Vidéos d'Action</h2>
+    <div class="video-container" data-category="action" data-login="true">
+        <iframe src="https://mega.nz/embed/eI1TQCpD#YqvYrfUQBbVi6hmdOo2xJKF1JPOm5tMypln9g7lk65o" frameborder="0" allowfullscreen></iframe>
+        <div class="bande-noire">
             👻OLDEST🇯🇲
-                        <br />
-                    bientôt disponible !
-</p>
-             </div>    
-                 
-                 <div class="overlay"> <button class="watch-button" data-category="comedie">Regarder</button> </div> </div> <p class="description">Description de la vidéo de comédie</p> <div class="video-info"> <span class="views">2500 vues</span> <span class="duration">1:45</span> </div> <div class="rating"> <span>Note : </span> <span class="stars">★★★★★</span> <span class="user-review">Avis : Hilarante, j'ai ri aux larmes !</span> </div> </div> <!-- Section Drame --> <div id="drameVideos" class="categoryVideos"> <h2>Vidéos de Drame : Civil War</h2> <div class="video-container"> <iframe src="https://mega.nz/embed/aU8XxaTT#WAtEXi_odyk89h_IuJEWxVzpKa0MQHvh0OG1EtEQYRA" frameborder="0" allowfullscreen></iframe> 
-                 
-                 <div class="bande-noire">
-            Civil War 
-                        <br />
-                        il y a 5 mois.
-</p>
-                 </div>
-                 
-                 <div class="overlay"> <button class="watch-button" data-category="drame">Regarder</button> </div> </div> <p class="description">Description : Interdit - 12 ans avec avertissement Une course effrénée à travers une Amérique fracturée qui, dans un futur proche, est plus que jamais sur le fil du rasoir.</p> <div class="video-info"> <span class="views">800 vues</span> <span class="duration">5:00</span> </div> <div class="rating"> <span>Note : </span> <span class="stars">★★★★☆</span> <span class="user-review">Avis : Une histoire émouvante et touchante.</span> </div> </div> <!-- Section Chrono --> <div id="chronoVideos" class="categoryVideos"> <h2>Vidéos de Chrono</h2> <div class="video-container"> <iframe src="" frameborder="0" allowfullscreen></iframe> 
-                 <div class="bande-noire">
-            👻OLDEST🇯🇲 
-                        <br />
-                        bientôt disponible !
-</p>
-                 </div>
-                 
-                 <div class="overlay"> <button class="watch-button" data-category="chrono">Regarder</button> </div> </div> <p class="description">Description de la vidéo de chrono</p> <div class="video-info"> <span class="views">1200 vues</span> <span class="duration">3:10</span> </div> <div class="rating"> <span>Note : </span> <span class="stars">★★★☆☆</span> <span class="user-review">Avis : Intéressant, mais un peu confus par moments.</span> </div> </div> </div>
+            <br />
+            Godzilla x Kong : Le Nouvel Empire il y a 5 mois.
+        </div>
+        <div class="overlay" id="actionOverlay">
+            <button class="watch-button" id="actionButton">Regarder</button>
+        </div>
+    </div>
+</div>
 
 
- <!-- Le reste du code reste inchangé --> <!-- ... --> 
+
+<!-- Section Aventure -->
+<div id="aventureVideos" class="categoryVideos" style="display: none;">
+    <h2>Vidéos d'Aventure</h2>
+    <div class="video-container" data-category="aventure" data-login="true">
+        <iframe src="https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo" frameborder="0" allowfullscreen></iframe>
+        <div class="bande-noire">
+            👻OLDEST🇯🇲
+            <br />
+            Atlas Shepherd ajouté récent il y a 5 jour.
+        </div>
+        <div class="overlay" id="aventureOverlay">
+            <button class="watch-button" id="aventureButton">Regarder</button>
+        </div>
+    </div>
+</div>
+
+
+
+   <!-- Section Comédie -->
+<div id="comedyVideos" class="categoryVideos" style="display: none;">
+    <h2>Vidéos de Comédie</h2>
+    <div class="video-container" data-category="comedy" data-login="true">
+        <iframe src="" frameborder="0" allowfullscreen></iframe>
+        <div class="bande-noire">
+            👻OLDEST🇯🇲
+            <br />
+            bientôt disponible !
+        </div>
+        <div class="overlay" id="comedyOverlay">
+            <button class="watch-button" id="comedyButton">Regarder</button>
+        </div>
+    </div>
+</div>
+ 
+
+    
+    <!-- Section Drame -->
+<div id="drameVideos" class="categoryVideos" style="display: none;">
+    <h2>Vidéos de Drame : Civil War</h2>
+    <div class="video-container" data-category="drame" data-login="true">
+        <iframe src="https://mega.nz/embed/aU8XxaTT#WAtEXi_odyk89h_IuJEWxVzpKa0MQHvh0OG1EtEQYRA" frameborder="0" allowfullscreen></iframe>
+        <div class="bande-noire">
+            Civil War
+            <br />
+            il y a 5 mois.
+        </div>
+        <div class="overlay" id="drameOverlay">
+            <button class="watch-button" id="drameButton">Regarder</button>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Section Chrono -->
+<div id="chronoVideos" class="categoryVideos" style="display: none;">
+    <h2>Vidéos de Chrono</h2>
+    <div class="video-container" data-category="chrono" data-login="true">
+        <iframe src="" frameborder="0" allowfullscreen></iframe>
+        <div class="bande-noire">
+            👻OLDEST🇯🇲
+            <br />
+            bientôt disponible !
+        </div>
+        <div class="overlay" id="chronoOverlay">
+            <button class="watch-button" id="chronoButton">Regarder</button>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+
+
+
+
 
         <div id="myModal" class="modal">
             <div class="modal-content">
@@ -424,6 +477,135 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
         const analytics = firebase.analytics();
         const auth = firebase.auth();
 
+            
+    </script>
+
+
+
+
+
+    
+
+    <script>
+    
+                
+            document.getElementById('signupForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const phoneNumber = document.getElementById('signupPhoneNumber').value;
+
+    auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            document.getElementById('signupSuccessMessage').innerText = 'Inscription réussie.';
+            setTimeout(() => {
+                modal.style.display = 'none';
+                signupButton.style.display = 'none';
+                loginButton.style.display = 'none';
+                logoutButton.style.display = 'inline';
+                showMenuBar();
+                userEmail.textContent = email;
+                userEmail.style.color = "green";
+                hideOverlayAndWatchButton();
+            }, 2000);
+        })
+        .catch((error) => {
+            document.getElementById('signupSuccessMessage').innerText = '';
+            document.getElementById('signupErrorMessage').innerText = error.message;
+        });
+});
+
+document.getElementById('loginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            document.getElementById('loginSuccessMessage').innerText = 'Connexion réussie.';
+            document.getElementById('loginErrorMessage').innerText = '';
+            showMenuBar();
+            userEmail.textContent = email;
+            userEmail.style.color = "green";
+
+            loginButton.style.display = 'none';
+            signupButton.style.display = 'none';
+            logoutButton.style.display = 'inline';
+            localStorage.setItem('userEmail', email);
+            hideOverlayAndWatchButton();
+        })
+        .catch((error) => {
+            document.getElementById('loginSuccessMessage').innerText = '';
+            document.getElementById('loginErrorMessage').innerText = error.message;
+        });
+});
+
+function hideOverlayAndWatchButton() {
+    const overlay = document.getElementById('videoOverlay');
+    const watchButton = document.getElementById('watchButton');
+    if (overlay) {
+        overlay.style.display = 'none';
+    }
+    if (watchButton) {
+        watchButton.style.display = 'none';
+    }
+}
+
+// Récupère l'email depuis le stockage local et l'affiche dans le menu au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    const storedEmail = localStorage.getItem('userEmail');
+    if (storedEmail) {
+        userEmail.textContent = storedEmail;
+        userEmail.style.color = "green";
+        loginButton.style.display = 'none';
+        signupButton.style.display = 'none';
+        logoutButton.style.display = 'inline';
+        showMenuBar();
+        hideOverlayAndWatchButton(); // Cache l'overlay et le bouton "Regarder" si l'utilisateur est déjà connecté
+    }
+});
+       
+    </script>
+    
+
+
+    
+      <script>
+
+      
+    // Cacher toutes les vidéos de catégories au chargement de la page, sauf l'action
+document.addEventListener('DOMContentLoaded', function () {
+    const categorySections = document.querySelectorAll('.categoryVideos');
+    categorySections.forEach(section => {
+        if (section.id !== 'actionVideos') {
+            section.style.display = 'none';
+        }
+    });
+    
+    // Afficher les vidéos d'accueil et d'action
+    document.getElementById('welcomeVideo').style.display = 'block';
+  document.getElementById('actionVideos').style.display = 'block';  
+});
+      
+
+
+
+
+</script>
+   
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
         const signupButton = document.getElementById('signupButton');
         const loginButton = document.getElementById('loginButton');
         const accueilButton = document.getElementById('accueilButton');
@@ -437,14 +619,16 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
         const logoutButton = document.getElementById('logoutButton');
         const forgotPasswordLink = document.getElementById('forgotPasswordLink');
 
+        const watchButtons = document.querySelectorAll('.watch-button');
+
         function showMenuBar() {
             menuBar.style.display = 'block';
         }
 
         function logout() {
             auth.signOut().then(() => {
-                localStorage.removeItem('userEmail'); // Supprime l'email du stockage local
-                window.location.reload(); // Recharge la page après la déconnexion
+                localStorage.removeItem('userEmail');
+                window.location.reload();
             }).catch((error) => {
                 console.log(error.message);
             });
@@ -461,7 +645,7 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
             loginFormContainer.style.display = 'block';
         });
         accueilButton.addEventListener('click', () => {
-            window.location.reload(); // Recharge la page pour revenir au début
+            window.location.reload();
         });
         closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
@@ -471,6 +655,7 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
                 modal.style.display = 'none';
             }
         });
+
         document.getElementById('signupForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const email = document.getElementById('signupEmail').value;
@@ -481,9 +666,10 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
                 .then((userCredential) => {
                     document.getElementById('signupSuccessMessage').innerText = 'Inscription réussie.';
                     setTimeout(() => {
-                        modal.style.display = 'none'; // Ferme le modal après 2 secondes
-                        signupButton.style.display = 'none'; // Cache le bouton d'inscription
-                        loginButton.style.display = 'inline'; // Affiche le bouton Connexion
+                        modal.style.display = 'none';
+                        signupButton.style.display = 'none';
+                        loginButton.style.display = 'inline';
+                        removeOverlays(); // Enlève les overlays pour toutes les vidéos
                     }, 2000);
                 })
                 .catch((error) => {
@@ -491,6 +677,7 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
                     document.getElementById('signupErrorMessage').innerText = error.message;
                 });
         });
+
         document.getElementById('loginForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const email = document.getElementById('loginEmail').value;
@@ -500,19 +687,15 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
                 .then((userCredential) => {
                     document.getElementById('loginSuccessMessage').innerText = 'Connexion réussie.';
                     document.getElementById('loginErrorMessage').innerText = '';
-                    showMenuBar(); // Affiche le menu après une connexion réussie
-                    userEmail.textContent = email; // Affiche l'adresse email de l'utilisateur connecté
-                    userEmail.style.color = "green"; // Met l'adresse email en vert
+                    showMenuBar();
+                    userEmail.textContent = email;
+                    userEmail.style.color = "green";
 
-                    function showMenuBar() {
-                        menuBar.style.display = 'block';
-                        window.location.reload(); // Rafraîchit la page
-                    }
-
-                    loginButton.style.display = 'none'; // Cache le bouton de connexion
-                    signupButton.style.display = 'none'; // Cache le bouton d'inscription
-                    logoutButton.style.display = 'inline'; // Affiche le bouton Déconnexion
-                    localStorage.setItem('userEmail', email); // Stocke l'email dans le stockage local
+                    loginButton.style.display = 'none';
+                    signupButton.style.display = 'none';
+                    logoutButton.style.display = 'inline';
+                    localStorage.setItem('userEmail', email);
+                    removeOverlays(); // Enlève les overlays pour toutes les vidéos
                 })
                 .catch((error) => {
                     document.getElementById('loginSuccessMessage').innerText = '';
@@ -525,7 +708,6 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
         });
         logoutButton.addEventListener('click', logout);
 
-        // Récupère l'email depuis le stockage local et l'affiche dans le menu au chargement de la page
         document.addEventListener('DOMContentLoaded', () => {
             const storedEmail = localStorage.getItem('userEmail');
             if (storedEmail) {
@@ -534,24 +716,76 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
                 loginButton.style.display = 'none';
                 signupButton.style.display = 'none';
                 logoutButton.style.display = 'inline';
-                showMenuBar();
+                removeOverlays(); // Enlève les overlays pour toutes les vidéos
             }
+
+            watchButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.getAttribute('data-category');
+                    document.getElementById(`${category}Videos`).style.display = 'block';
+                    button.closest('.overlay').style.display = 'none';
+                });
+            });
         });
 
-        forgotPasswordLink.addEventListener('click', () => {
-            const email = prompt("Veuillez entrer votre adresse e-mail pour réinitialiser votre mot de passe :");
-            if (email) {
-                auth.sendPasswordResetEmail(email)
-                    .then(() => {
-                        alert("Un email de réinitialisation de mot de passe a été envoyé à votre adresse e-mail.");
-                    })
-                    .catch((error) => {
-                        alert(error.message);
-                    });
-            }
-        });
+        function removeOverlays() {
+            const overlays = document.querySelectorAll('.overlay');
+            overlays.forEach(overlay => {
+                overlay.style.display = 'none';
+            });
+        }
+    </script>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+  // Récupérer toutes les vidéos et leurs boutons de lecture
+  const videos = document.querySelectorAll('.video');
+  const watchButtons = document.querySelectorAll('.watch-button');
+  const loginButton = document.getElementById('login-button');
+  const logoutButton = document.getElementById('logout-button');
+  
+  // Fonction pour vérifier si l'utilisateur est connecté
+  function isLoggedIn() {
+    return localStorage.getItem('loggedIn') === 'true';
+  }
 
-        document.getElementById("categorieBtn").addEventListener("click", function() {
+  // Fonction pour afficher ou masquer les vidéos en fonction de la connexion
+  function updateVideoVisibility() {
+    videos.forEach(video => {
+      const category = video.dataset.category;
+      const requiredLogin = video.dataset.login === 'true';
+
+      // Vérifier si l'utilisateur doit être connecté pour voir la vidéo
+      if (requiredLogin && !isLoggedIn()) {
+        video.querySelector('.watch-button').style.display = 'none';
+      } else {
+        video.querySelector('.watch-button').style.display = 'block';
+      }
+    });
+  }
+
+  // Gérer le clic sur le bouton de connexion
+  if (loginButton) {
+    loginButton.addEventListener('click', function() {
+      localStorage.setItem('loggedIn', 'true');
+      updateVideoVisibility();
+    });
+  }
+
+  // Gérer le clic sur le bouton de déconnexion
+  if (logoutButton) {
+    logoutButton.addEventListener('click', function() {
+      localStorage.setItem('loggedIn', 'false');
+      updateVideoVisibility();
+    });
+  }
+
+  // Vérifier la visibilité des vidéos au chargement de la page
+  updateVideoVisibility();
+});
+
+</script>
+<script>
+document.getElementById("categorieBtn").addEventListener("click", function() {
             var dropdown = document.getElementById("categorieDropdown");
             if (dropdown.style.display === "block") {
                 dropdown.style.display = "none";
@@ -571,55 +805,31 @@ il y a 5 mois.</h2> <div class="video-container"> <!-- Intégration de la vidéo
                 });
             });
         });
+</script>
 
-        // Gérer le clic sur le bouton "Regarder"
-        const watchButtons = document.querySelectorAll('.watch-button');
-        watchButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const user = firebase.auth().currentUser;
-                if (!user) {
-                    modal.style.display = 'block'; // Affiche la modal d'inscription si l'utilisateur n'est pas connecté
-                }
-            });
-        });
-                        
-    </script>
+<script>
+  // Récupérer les éléments nécessaires
+const boutonRegarder = document.getElementById('boutonRegarder');
+const video = document.getElementById('video');
+const flou = document.getElementById('flou');
 
-
-    <script>
-    // Identifie le menu après la connexion réussie
-function showMenuBar() {
-    menuBar.style.display = 'block';
+// Ajouter un gestionnaire d'événement au clic sur le bouton "Regarder"
+boutonRegarder.addEventListener('click', () => {
+    // Toggle la classe CSS 'flou' sur l'élément du flou
+    flou.classList.toggle('flou');
     
-    // Supprime les boutons "Regarder" une fois le menu affiché
-    document.querySelectorAll('.watch-button').forEach(button => {
-        button.style.display = 'none';
-    });
-
-    // Supprime complètement l'overlay de chaque vidéo une fois le menu affiché
-    document.querySelectorAll('.video-container').forEach(video => {
-        video.querySelector('.overlay').remove(); // Supprime l'élément overlay
-    });
-}
-    </script>
-      <script>
-
-      
-    // Cacher toutes les vidéos de catégories au chargement de la page, sauf l'action
-document.addEventListener('DOMContentLoaded', function () {
-    const categorySections = document.querySelectorAll('.categoryVideos');
-    categorySections.forEach(section => {
-        if (section.id !== 'actionVideos') {
-            section.style.display = 'none';
-        }
-    });
-    
-    // Afficher les vidéos d'accueil et d'action
-    document.getElementById('welcomeVideo').style.display = 'block';
-  document.getElementById('actionVideos').style.display = 'block';  
+    // Toggle la lecture de la vidéo
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
 });
-      
 
-      </script>  
+
+ 
+</script>
+
+
 </body>
 </html> 
