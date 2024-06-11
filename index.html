@@ -1,9 +1,6 @@
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta name="google-adsense-account" content="ca-pub-5074406904097551">
    
     <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/41c65bf1-d86c-a7f6-b1fe-c746a4783db0.jpg" type="image/x-icon">
     <meta charset="UTF-8">
@@ -11,7 +8,19 @@
     <title>OldestStream</title>
     <!-- Ajoutez vos liens vers les fichiers CSS ici -->
     <style>
+  /* Polices */ @import url('https://fonts.googleapis.com/css2?family=Anta&family=Roboto+Slab&display=swap'); body { font-family: 'Anta', sans-serif; margin: 0; padding: 0; background-color: #287384; color: #333; }
 
+
+/* Header */ header {
+    background-color: #ff00ff; padding: 20px; text-align: center; 
+}
+        
+
+
+        header h1 
+        { font-family: 'Roboto Slab', serif; font-size: 2.5em; margin-bottom: 10px; color: #ff0000; border: 2px solid yellow; padding: 10px 20px; display: inline-block; 
+        } 
+        
 /* Styles pour l'image avec zoom */
 .image-container {
     position: relative;
@@ -358,21 +367,25 @@ button[type="submit"] {
 }
 
 
-      
+
+
+/* Styles pour le bouton Catégorie */
 /* Catégorie Dropdown */
 #categorieDropdown {
-    display: none;
+    display: none; /* Caché par défaut */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #34495e;
     border-bottom: 1px solid #ccc;
+    z-index: 999; /* Ordre de superposition élevé */
 }
 
 #categorieDropdown ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #categorieDropdown ul li {
@@ -383,8 +396,10 @@ button[type="submit"] {
 
 #categorieDropdown ul li:hover {
     background-color: #2c3e50;
-  }
+}
 
+
+        
 
 
 
@@ -534,22 +549,7 @@ button[type="submit"] {
   color: #00ff00;
 }
 
-/* Styles pour les appareils mobiles */
-@media (max-width: 480px) {
-  .modal-content {
-    width: 90%;
-    margin: 20% auto;
-  }
 
-  label {
-    font-size: 16px;
-  }
-
-  input,
-  button[type="submit"] {
-    font-size: 14px;
-  }
-}       
 
 
 
@@ -689,10 +689,6 @@ button[type="submit"].dark-mode {
 
 
 
-
-
-
-
         /* Styles pour le bouton Accueil */
 #accueilButton {
     background-color: #ffffff; /* Fond blanc */
@@ -776,21 +772,16 @@ button[type="submit"].dark-mode {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    align-items: center; /* Centre les images verticalement dans l'item */
+    overflow: hidden; /* Cache les parties débordantes */
 }
 
-.carousel-image {
-    max-width: 100%;
-    max-height: 100%;
+.carousel-image, .carousel-video {
+    width: 100%;
+    max-width: 474px; /* Limite la largeur des images */
+    height: 266px; /* Fixe la hauteur des images */
+    object-fit: contain; /* Assure que l'image est entièrement visible sans être étirée */
     display: block;
-    object-fit: cover;
-}
-
-.carousel-video {
-    width: 474px;
-    height: 266px;
-    border: none;
 }
 
 .carousel-control {
@@ -811,14 +802,13 @@ button[type="submit"].dark-mode {
 .carousel-control.next {
     right: 10px;
 }
-
     </style>
 </head>
 <body>
 
      
     <header>
-        <h1>OldestStream</h1>
+        <h1>FluxOldest</h1>
         <nav>
             <ul>
                 <li><button id="accueilButton">Accueil</button></li>
@@ -863,35 +853,53 @@ button[type="submit"].dark-mode {
  
 <hr />
 
+
 <div class="carousel">
     <div class="carousel-inner">
         <div class="carousel-item">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/e8ee8efe-989c-8d5a-bad7-1c42bd69e59d.jpeg" class="carousel-image" alt="Image 1">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/79120212-44be-35f7-a9db-f05a1554631c.jpeg" class="carousel-image" alt="Image 1">
         </div>
         <div class="carousel-item">
-            <iframe class="carousel-video" src="https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo" frameborder="0" allowfullscreen></iframe>
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/4da9aff3-0ab0-cd29-1ca8-fe303c46d4fd.jpg" class="carousel-image" alt="Image Placeholder">
         </div>
         <div class="carousel-item">
             <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c0a5ff6d-9782-806b-ab17-4effeaca2d94.jpg" class="carousel-image" alt="Image 2">
         </div>
         <div class="carousel-item">
-            <iframe class="carousel-video" src="video-url2.mp4" frameborder="0" allowfullscreen></iframe>
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3bddcfad-cec3-573d-2571-78e3cea5a10b.jpg" class="carousel-image" alt="Image Placeholder">
         </div>
         <div class="carousel-item">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/sample-image-3.jpeg" class="carousel-image" alt="Image 3">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bdb022d3-47e1-395e-3aeb-ac33bb1f1877.jpg" class="carousel-image" alt="Image 3">
         </div>
         <div class="carousel-item">
-            <iframe class="carousel-video" src="video-url3.mp4" frameborder="0" allowfullscreen></iframe>
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/a81b6bfa-dfec-4f99-f5c3-8fe8d38bd601.jpeg" class="carousel-image" alt="Image Placeholder">
+        </div>
+        <!-- Nouveaux éléments ajoutés -->
+        <div class="carousel-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0e4922af-a5f7-8c59-8cf1-fda34f5282ef.jpeg" class="carousel-image" alt="Image 4">
+        </div>
+        <div class="carousel-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/2cce861a-493d-0029-9ad4-5d01b46257ba.jpg" class="carousel-image" alt="Image Placeholder">
+        </div>
+        <div class="carousel-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/5a587e09-37d6-eb0a-6003-8d739dcea631.jpeg" class="carousel-image" alt="Image 5">
+        </div>
+        <div class="carousel-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/e8ee8efe-989c-8d5a-bad7-1c42bd69e59d.jpeg" class="carousel-image" alt="Image Placeholder">
         </div>
     </div>
+
+
+    
     <button class="carousel-control prev">❮</button>
     <button class="carousel-control next">❯</button>
 </div>
+
      
 <div id="videos">
     <!-- Vidéo d'accueil -->
     <div id="welcomeVideo" class="categoryVideos">
-        <h2 class="video-title">Vidéo d'Accueil : Godzilla x Kong 2024 !</h2>
+        <h2 class="video-title">Godzilla x Kong 2024!</h2>
         <div class="video-container">
             <iframe src="https://mega.nz/embed/eI1TQCpD#YqvYrfUQBbVi6hmdOo2xJKF1JPOm5tMypln9g7lk65o" frameborder="0" allowfullscreen></iframe>
             <!-- Conteneur pour l'image avec zoom -->
@@ -899,17 +907,13 @@ button[type="submit"].dark-mode {
                 <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/79120212-44be-35f7-a9db-f05a1554631c.jpeg" alt="Votre description" class="zoomableImage">
                 <div class="bande-noire">
                     👻OLDEST🇯🇲
-                    <br />
-                    Godzilla x Kong : Le Nouvel Empire il y a 5 mois.
-                    
+                    <br />                  
                 </div>            
             </div>                
         <div class="overlay" id="videoOverlay">
                 <button class="watch-button" id="watchButton" data-category="welcome">Regarder</button>
 </div>                
-
-    </div>
-        
+    </div>       
         <p class="description">
             Description : Le tout-puissant Kong et le redoutable Godzilla unissent leurs forces contre une terrible menace encore secrète qui risque de les anéantir et qui met en danger la survie même de l’espèce humaine. GODZILLA X KONG : LE NOUVEL EMPIRE remonte à l’origine des deux titans et aux mystères de Skull Island, tout en révélant le combat mythique qui a contribué à façonner ces deux créatures hors du commun et lié leur sort à celui de l’homme pour toujours…
         </p>
@@ -923,10 +927,80 @@ button[type="submit"].dark-mode {
             <span class="user-review">Avis : Excellente vidéo, très instructive.</span>
         </div>
     </div>
+
+
+
+
+<div id="welcomeVideo" class="categoryVideos">
+        <h2 class="video-title">STING 2024 !</h2>
+        <div class="video-container">
+            <iframe src="https://mega.nz/embed/5vckRYyK#DKEEA996g_FBkpktM-Ai4YpfFcyqFHPPuQC-5sBveFc" frameborder="0" allowfullscreen></iframe>
+            <!-- Conteneur pour l'image avec zoom -->
+            <div class="image-container">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0e4922af-a5f7-8c59-8cf1-fda34f5282ef.jpeg" alt="Votre description" class="zoomableImage">
+                <div class="bande-noire">
+                    👻OLDEST🇯🇲
+                    <br />                  
+                </div>            
+            </div>                
+        <div class="overlay" id="videoOverlay">
+                <button class="watch-button" id="watchButton" data-category="welcome">Regarder</button>
+</div>                
+    </div>      
+        <p class="description">
+            Description : Par une nuit froide et orageuse à New York, un objet mystérieux tombe du ciel et brise la fenêtre d’un immeuble délabré. C’est un œuf, et de cet œuf émerge une étrange petite araignée... La créature est découverte par Charlotte, une jeune fille rebelle de 12 ans obsédée par les bandes dessinées. Malgré tous les efforts de son beau-père Ethan pour se connecter avec elle par le biais de leur co-création de bande dessinée Fang Girl, Charlotte se sent isolée.
+        </p>
+        <div class="video-info">
+            <span class="views">500 vues</span>
+            <span class="duration">3:45</span>
+        </div>
+        <div class="rating">
+            <span>Note : </span>
+            <span class="stars">★★★★☆</span>
+            <span class="user-review">Avis : Excellente vidéo, très instructive.</span>
+        </div>
+</div>
+
+
+<div id="welcomeVideo" class="categoryVideos">
+        <h2 class="video-title">Godzilla Minus 2024!</h2>
+        <div class="video-container">
+            <iframe src="https://mega.nz/embed/NncAHSDT#4d6GNuwvcaM94Nm2BB1FitQg3S_zOkIHptIImptLXMY" frameborder="0" allowfullscreen></iframe>
+            <!-- Conteneur pour l'image avec zoom -->         
+            <div class="image-container">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c0a5ff6d-9782-806b-ab17-4effeaca2d94.jpg" alt="Votre description" class="zoomableImage">
+                <div class="bande-noire">
+                    👻OLDEST🇯🇲
+                    <br />                  
+                </div>            
+            </div>                
+        <div class="overlay" id="videoOverlay">
+                <button class="watch-button" id="watchButton" data-category="welcome">Regarder</button>
+</div>                
+    </div>      
+        <p class="description">
+            Description Tout public : 
+Le Japon se remet à grand peine de la Seconde Guerre mondiale qu’un péril gigantesque émerge au large de Tokyo. Koichi, un kamikaze déserteur traumatisé par sa première confrontation avec Godzilla, voit là l’occasion de racheter sa conduite pendant la guerre.
+        </p>
+        <div class="video-info">
+            <span class="views">500 vues</span>
+            <span class="duration">3:45</span>
+        </div>
+        <div class="rating">
+            <span>Note : </span>
+            <span class="stars">★★★★☆</span>
+            <span class="user-review">Avis : Excellente vidéo, très instructive.</span>
+        </div>
+</div>
+
+
+
+
+    
 <div id="videos">
     <!-- Section Action -->
     <div id="actionVideos" class="categoryVideos" style="display: none;">
-        <h2 class="video-title">Vidéos d'Action: Darkness of Man 2024 !</h2>
+        <h2 class="video-title">Action Darkness of Man 2024!</h2>
         
         <div class="video-container" data-category="action" data-login="true">
             <iframe src="https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY" frameborder="0" allowfullscreen></iframe>
@@ -936,19 +1010,12 @@ button[type="submit"].dark-mode {
                 <div class="bande-noire">
                     👻OLDEST🇯🇲
                     <br />
-                    Godzilla x Kong : Le Nouvel Empire il y a 5 mois.
-
                 </div>            
             </div>
-
  <div class="overlay" id="aventureOverlay">
             <button class="watch-button" id="aventureButton">Regarder</button>
  </div>
-
-
-                   
-            
-        </div>
+     </div>
         <p class="description">
             Description : Dans un futur proche, l’humanité est sur le point de découvrir un secret qui changera la face du monde. Les forces du mal, connues sous le nom de Darkness of Man, se regroupent pour prendre le contrôle de cette découverte et plonger le monde dans le chaos. Un groupe de héros se lève pour affronter cette menace et sauver l'humanité d'un destin terrible...
         </p>
@@ -968,31 +1035,21 @@ button[type="submit"].dark-mode {
 <div id="videos">
     <!-- Section Aventure -->
     <div id="aventureVideos" class="categoryVideos" style="display: none;">
-        <h2 class="video-title">Vidéos d'Aventure : Atlas 2024 !</h2>
+        <h2 class="video-title">Vidéos d'Aventure : Atlas 2024!</h2>
         <div class="video-container" data-category="aventure" data-login="true">
             <iframe src="https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo" frameborder="0" allowfullscreen></iframe>
             <div class="image-container">
-                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/79120212-44be-35f7-a9db-f05a1554631c.jpeg" alt="Image de la vidéo" class="zoomableImage">
-
-
-
-                
-                
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3bddcfad-cec3-573d-2571-78e3cea5a10b.jpg" alt="Image de la vidéo" class="zoomableImage">             
                 <div class="bande-noire">
                     👻OLDEST🇯🇲
                     <br />
-                    Godzilla x Kong : Le Nouvel Empire il y a 5 mois.
+                    
                     <span class="toggle-zoom">🔽</span>
                 </div>
-
             </div>
-
  <div class="overlay" id="aventureOverlay">
             <button class="watch-button" id="aventureButton">Regarder</button>
- </div>
-
-
-            
+ </div>            
         </div>
         <p class="description">
             Description : Brillante analyste de données, Atlas Shepherd est misanthrope et se méfie totalement de l’intelligence artificielle. Tandis qu’elle se lance dans une mission destinée à capturer un robot rebelle, elle comprend qu’elle a déjà eu affaire à cette mystérieuse machine par le passé. Alors que la mission ne se déroule pas comme prévu, il ne reste plus à Atlas qu’à faire enfin confiance à l’IA si elle veut sauver l’avenir de l’humanité...
@@ -1010,26 +1067,23 @@ button[type="submit"].dark-mode {
 <div id="videos">
     <!-- Section Comédie -->
     <div id="comedyVideos" class="categoryVideos" style="display: none;">
-        <h2>Vidéos de Comédie</h2>
+        <h2 class="video-title">Vidéos de Comédie : bientôt disponible !</h2>
         <div class="video-container" data-category="comedy" data-login="true">
             <iframe src="https://mega.nz/embed/aU8XxaTT#WAtEXi_odyk89h_IuJEWxVzpKa0MQHvh0OG1EtEQYRA" frameborder="0" allowfullscreen></iframe>
             <div class="image-container">
-                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/79120212-44be-35f7-a9db-f05a1554631c.jpeg" alt="Image de la vidéo" class="zoomableImage">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/5a587e09-37d6-eb0a-6003-8d739dcea631.jpeg" alt="Image de la vidéo" class="zoomableImage">
                 <div class="bande-noire">
                     👻OLDEST🇯🇲
                     <br />
                     bientôt disponible !
                 </div>
-            </div>
-        
-
+            </div>       
  <div class="overlay" id="aventureOverlay">
             <button class="watch-button" id="aventureButton">Regarder</button>
- </div>
-        
+ </div>        
     </div>
 <p class="description">
-            Description : Brillante analyste de données, Atlas Shepherd est misanthrope et se méfie totalement de l’intelligence artificielle. Tandis qu’elle se lance dans une mission destinée à capturer un robot rebelle, elle comprend qu’elle a déjà eu affaire à cette mystérieuse machine par le passé. Alors que la mission ne se déroule pas comme prévu, il ne reste plus à Atlas qu’à faire enfin confiance à l’IA si elle veut sauver l’avenir de l’humanité...
+            Description : Fous de rire 
         </p>
         <div class="video-info">
             <span class="views">500 vues</span>
@@ -1050,7 +1104,7 @@ button[type="submit"].dark-mode {
         <div class="video-container" data-category="drame" data-login="true">
             <iframe src="https://mega.nz/embed/aU8XxaTT#WAtEXi_odyk89h_IuJEWxVzpKa0MQHvh0OG1EtEQYRA" frameborder="0" allowfullscreen></iframe>
             <div class="image-container">
-                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/79120212-44be-35f7-a9db-f05a1554631c.jpeg" alt="Image de la vidéo" class="zoomableImage">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/a81b6bfa-dfec-4f99-f5c3-8fe8d38bd601.jpeg" alt="Image de la vidéo" class="zoomableImage">
                 <div class="bande-noire">
                     👻OLDEST🇯🇲
                     <br />
@@ -1079,11 +1133,11 @@ button[type="submit"].dark-mode {
 
     <!-- Section Chrono -->
     <div id="chronoVideos" class="categoryVideos" style="display: none;">
-        <h2>Vidéos de Chrono</h2>
+            <h2 class="video-title">Vidéos de Chrono : bientôt disponible !</h2>
         <div class="video-container" data-category="chrono" data-login="true">
             <iframe src="" frameborder="0" allowfullscreen></iframe>
             <div class="image-container">
-                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/79120212-44be-35f7-a9db-f05a1554631c.jpeg" alt="Image de la vidéo" class="zoomableImage">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f58b3018-e062-a2f3-3006-81557efccc4c.jpeg" alt="Image de la vidéo" class="zoomableImage">
                 <div class="bande-noire">
                     👻OLDEST🇯🇲
                     <br />
@@ -1470,29 +1524,64 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+
+
 <script>
-document.getElementById("categorieBtn").addEventListener("click", function() {
-            var dropdown = document.getElementById("categorieDropdown");
-            if (dropdown.style.display === "block") {
-                dropdown.style.display = "none";
-            } else {
-                dropdown.style.display = "block";
-            }
-        });    
+   document.getElementById("categorieBtn").addEventListener("click", function() {
+    var dropdown = document.getElementById("categorieDropdown");
+    if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    } else {
+        dropdown.style.display = "block";
+    }
+});
 
-        document.querySelectorAll("#categorieDropdown ul li").forEach(function(category) {
-            category.addEventListener("click", function() {
-                var categoryName = category.textContent;
-                document.querySelectorAll("#videos .categoryVideos").forEach(function(videoCategory) {
-                    videoCategory.style.display = "none";
-                    if (videoCategory.querySelector("h2").textContent.includes(categoryName)) {
-                        videoCategory.style.display = "block";
-                    }
-                });
-            });
+document.querySelectorAll("#categorieDropdown ul li").forEach(function(category) {
+    category.addEventListener("click", function() {
+        var categoryName = category.textContent.toLowerCase();
+        document.querySelectorAll("#videos .categoryVideos").forEach(function(videoCategory) {
+            videoCategory.style.display = "none";
         });
-</script>
 
+        switch (categoryName) {
+            case "action":
+                var targetSection = document.getElementById("actionVideos");
+                break;
+            case "aventure":
+                var targetSection = document.getElementById("aventureVideos");
+                break;
+            case "comédie":
+                var targetSection = document.getElementById("comedyVideos");
+                break;
+            case "drame":
+                var targetSection = document.getElementById("drameVideos");
+                break;
+            case "chrono":
+                var targetSection = document.getElementById("chronoVideos");
+                break;
+            default:
+                var targetSection = null;
+        }
+
+        if (targetSection) {
+            targetSection.style.display = "block";
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
+
+// Fermer le menu déroulant des catégories lorsque l'utilisateur clique en dehors
+document.addEventListener('click', function(event) {
+    var dropdown = document.getElementById('categorieDropdown');
+    var isClickInsideDropdown = dropdown.contains(event.target);
+    var isClickOnCategorieBtn = event.target.id === 'categorieBtn';
+
+    if (!isClickInsideDropdown && !isClickOnCategorieBtn) {
+        dropdown.style.display = 'none';
+    }
+});
+        
+</script>
 
     
  
@@ -1541,6 +1630,7 @@ document.getElementById("categorieBtn").addEventListener("click", function() {
     }
 });
 </script>
+
 
 
 
@@ -1616,63 +1706,47 @@ document.getElementById("categorieBtn").addEventListener("click", function() {
     </script>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const carouselInner = document.querySelector('.carousel-inner');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const prevButton = document.querySelector('.carousel-control.prev');
-    const nextButton = document.querySelector('.carousel-control.next');
-    let currentIndex = 0;
-    let autoScrollInterval;
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    const themeToggleButton = document.getElementById("theme-toggle");
+    const body = document.body;
+    const header = document.querySelector("header");
+    const navLinks = document.querySelectorAll("nav ul li a");
+    const categoryVideos = document.querySelectorAll(".categoryVideos");
+    const modalContent = document.querySelectorAll(".modal-content");
+    const submitButtons = document.querySelectorAll("button[type='submit']");
 
-    function showSlide(index) {
-        currentIndex = (index + carouselItems.length) % carouselItems.length;
-        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+    themeToggleButton.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+        header.classList.toggle("dark-mode");
 
-    function autoScroll() {
-        autoScrollInterval = setInterval(() => {
-            showSlide(currentIndex + 1);
-        }, 3000); // Change slide every 3 seconds
-    }
-
-    prevButton.addEventListener('click', () => {
-        clearInterval(autoScrollInterval);
-        showSlide(currentIndex - 1);
-        autoScroll();
-    });
-
-    nextButton.addEventListener('click', () => {
-        clearInterval(autoScrollInterval);
-        showSlide(currentIndex + 1);
-        autoScroll();
-    });
-
-    document.querySelectorAll('.carousel-video').forEach(video => {
-        video.addEventListener('play', () => {
-            clearInterval(autoScrollInterval);
+        navLinks.forEach(link => {
+            link.classList.toggle("dark-mode");
         });
 
-        video.addEventListener('pause', () => {
-            autoScroll();
+        categoryVideos.forEach(category => {
+            category.classList.toggle("dark-mode");
         });
 
-        video.addEventListener('dblclick', () => {
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.mozRequestFullScreen) { // Firefox
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // IE/Edge
-                video.msRequestFullscreen();
-            }
+        modalContent.forEach(modal => {
+            modal.classList.toggle("dark-mode");
+        });
+
+        submitButtons.forEach(button => {
+            button.classList.toggle("dark-mode");
         });
     });
-
-    autoScroll();
 });
+    </script>
+
+<script>
+   document.getElementById('playAdBtn').addEventListener('click', function() {
+  // Redirigez l'utilisateur vers une vidéo ou une page de soutien
+  window.location.href = '';
+});
+
 </script>
+
     
 </body>
 </html> 
