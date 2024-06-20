@@ -840,7 +840,36 @@ button[type="submit"].dark-mode {
         color: #f39c12;
     }
 
+/* Style pour les boutons de partage */
+.share-buttons {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
+.share-buttons h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.share-buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.share-buttons button:hover {
+    background-color: #0056b3;
+        }
     </style>
 </head>
 <body>   
@@ -881,8 +910,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1>Bienvenue sur notre site de streaming 🎬</h1>
         <p>Accédez à toutes nos vidéos sans frais supplémentaires !</p>
         <p>Abonnés à notre Snapchat 👻 : accès gratuit immédiat. 🥰</p>
-        <p>Non abonnés : profitez d'un mois gratuit après inscription.🎉</p>
         <p>Aucune carte de crédit requise pour l'inscription !</p>
+
+
+<!-- Boutons de partage -->
+<div class="share-buttons">
+    <h2>Partager ce site</h2>
+    <button onclick="shareOnFacebook()" style="background-color: #3b5998; color: white;">
+        <span>📘</span> Facebook
+    </button>
+    <button onclick="shareOnInstagram()" style="background-color: #E1306C; color: white;">
+        <span>📸</span> Instagram
+    </button>
+    <button onclick="shareOnSnapchat()" style="background-color: #FFFC00; color: black;">
+        <span>👻</span> Snapchat
+    </button>
+    <button onclick="shareOnTikTok()" style="background-color: #000000; color: white;">
+        <span>🎵</span> TikTok
+    </button>
+</div>
+
+
+
+        
     </div>
 </section>
 
@@ -1295,14 +1345,39 @@ Le Japon se remet à grand peine de la Seconde Guerre mondiale qu’un péril gi
                    </div>
        <button id="confirmOrderButton" class="profile-button-green">Obtenir l'offre</button>
 <hr />
-
-
        
        <button id="theme-toggle">Changer de Thème</button>
         
         <button id="logoutButton" class="profile-button">Déconnexion</button>
     </div>
 
+<script>
+    function shareOnFacebook() {
+        const url = encodeURIComponent('https://lucious-lion04.github.io/flux/');
+        const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        window.open(shareUrl, '_blank');
+    }
+
+    function shareOnInstagram() {
+        const url = encodeURIComponent('https://lucious-lion04.github.io/flux/');
+        const shareUrl = `https://www.instagram.com/?url=${url}`;
+        window.open(shareUrl, '_blank');
+    }
+
+    function shareOnSnapchat() {
+        const url = encodeURIComponent('https://lucious-lion04.github.io/flux/');
+        const shareUrl = `https://www.snapchat.com/scan?attachmentUrl=${url}`;
+        window.open(shareUrl, '_blank');
+    }
+
+    function shareOnTikTok() {
+        const url = encodeURIComponent('https://lucious-lion04.github.io/flux/');
+        const shareUrl = `https://www.tiktok.com/share?url=${url}`;
+        window.open(shareUrl, '_blank');
+    }
+</script>
+
+    
      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
