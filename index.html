@@ -381,9 +381,9 @@ button[type="submit"] {
 #categorieDropdown {
     display: none; /* Caché par défaut */
     position: fixed;
-    top: 0;
+    top: 3%;
     left: 0;
-    width: 100%;
+    width: 99%;
     background-color: #34495e;
     border-bottom: 1px solid #ccc;
     z-index: 999; /* Ordre de superposition élevé */
@@ -1791,7 +1791,7 @@ document.addEventListener('click', function(event) {
         zoomableImage.addEventListener("click", function() {
             zoomModal.style.display = "block";
             zoomedImage.src = this.src;
-            zoomedImage.style.width = "100%"; // Zoomer l'image à 100% de la largeur de la modal
+            zoomedImage.style.width = "80%"; // Zoomer l'image à 100% de la largeur de la modal
             zoomedImage.style.height = "auto"; // Ajuster la hauteur de l'image proportionnellement
             document.body.style.overflow = "hidden"; // Empêcher le défilement de la page en arrière-plan
 
