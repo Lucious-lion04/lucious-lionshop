@@ -892,17 +892,35 @@ button[type="submit"].dark-mode {
 .share-buttons button:hover {
     background-color: #0056b3;
         }
+
+
+        /* Style de la barre de recherche et du bouton */
+#searchBar {
+    width: calc(100% - 110px); /* Ajuster la largeur pour tenir compte du bouton */
+    padding: 10px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
     </style>
 </head>
-<body>   
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS6XRLLS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-    
+<body>     
     <header>
         <h1>FluxOldest</h1>
         <nav>
@@ -926,6 +944,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </ul>
         </nav>
     </header>
+
+<!-- Barre de recherche pour filtrer les vidéos -->
+<input type="text" id="searchBar" placeholder="Rechercher des vidéos...">
+<button id="searchBtn">Rechercher</button>
+
+    
  <main>   
 
 <section class="content-section">
@@ -1820,7 +1844,33 @@ document.addEventListener('click', function(event) {
         dropdown.style.display = 'none';
     }
 });
-        
+
+
+
+
+    // Fonction de recherche
+function rechercherVideos() {
+    var searchTerm = document.getElementById("searchBar").value.toLowerCase();
+    var found = false;
+    document.querySelectorAll("#videos .categoryVideos").forEach(function(videoCategory) {
+        var videoTitle = videoCategory.querySelector(".video-title").textContent.toLowerCase();
+        if (videoTitle.includes(searchTerm)) {
+            videoCategory.style.display = "block";
+            if (!found) {
+                videoCategory.scrollIntoView({ behavior: "smooth" });
+                found = true;
+            }
+        } else {
+            videoCategory.style.display = "none";
+        }
+    });
+}
+
+// Gestion de la barre de recherche lors de la saisie
+document.getElementById("searchBar").addEventListener("input", rechercherVideos);
+
+// Gestion du bouton de recherche
+document.getElementById("searchBtn").addEventListener("click", rechercherVideos);
 </script>
 
     
