@@ -915,6 +915,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div id="categorieDropdown">
                     <ul>
                         <li>Action</li>
+                        <li>Thriller</li>
                         <li>Aventure</li>
                         <li>Comédie</li>
                         <li>Drame</li>
@@ -951,15 +952,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span>🎵</span> TikTok
     </button>
 </div>
-
-
-
         
     </div>
-</section>
-
-
-     
+</section>     
     <section id="featured">
     <h2>En ce moment sur OldestStream</h2>
     <div class="featured-info">
@@ -969,6 +964,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <br />
 <div class="carousel">
     <div class="carousel-inner">
+
+        <div class="carousel-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0e474f27-1df1-23e5-167c-b4e1e29ba646.jpg" class="carousel-image" alt="Image 1">
+        </div>
         <div class="carousel-item">
             <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/79120212-44be-35f7-a9db-f05a1554631c.jpeg" class="carousel-image" alt="Image 1">
         </div>
@@ -1290,6 +1289,29 @@ Le Japon se remet à grand peine de la Seconde Guerre mondiale qu’un péril gi
             </div>
         </div>
     </div>
+
+
+<!-- Section thriller -->
+    <div id="thrillerVideos" class="categoryVideos" style="display: none;">
+            <h2 class="video-title">Vidéos de thriller : The Beekeeper
+
+2024 🐝 !</h2>
+        <div class="video-container" data-category="thriller" data-login="true">
+            <iframe src="" frameborder="0" allowfullscreen></iframe>
+            <div class="image-container">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f58b3018-e062-a2f3-3006-81557efccc4c.jpeg" alt="Image de la vidéo" class="zoomableImage">
+                <div class="bande-noire">
+                    👻OLDEST🇯🇲
+                    <br />
+                    bientôt disponible !
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
 </div>
 
 <!-- Modal pour le zoom -->
@@ -1774,10 +1796,15 @@ document.querySelectorAll("#categorieDropdown ul li").forEach(function(category)
             case "chrono":
                 var targetSection = document.getElementById("chronoVideos");
                 break;
+
+case "thriller":
+                var targetSection = document.getElementById("thrillerVideos");
+                break;
+    
             default:
                 var targetSection = null;
         }
-
+        
         if (targetSection) {
             targetSection.style.display = "block";
             targetSection.scrollIntoView({ behavior: "smooth" });
