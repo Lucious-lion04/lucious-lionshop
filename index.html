@@ -19,7 +19,7 @@ snaptr('track', 'PAGE_VIEW');
 
 </script>
 <!-- End Snap Pixel Code -->
-    <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/41c65bf1-d86c-a7f6-b1fe-c746a4783db0.jpg" type="image/x-icon">
+    <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/db844041-c4bd-216b-e403-5d164018f8db.jpg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STRONGFLIX</title>
@@ -874,8 +874,13 @@ button[type="submit"].dark-mode {
 </section>
  <br />
 <div class="carousel">
-    <div class="carousel-inner">
-
+    <div class="carousel-inner">      
+<div class="carousel-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/db844041-c4bd-216b-e403-5d164018f8db.jpg" class="carousel-image" alt="Image 2">
+        </div>
+    <div class="carousel-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f3657ac5-276b-a117-4a67-192814760ff1.jpg" class="carousel-image" alt="Image 2">
+        </div>
         <div class="carousel-item">
             <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0e474f27-1df1-23e5-167c-b4e1e29ba646.jpg" class="carousel-image" alt="Image 1">
         </div>
@@ -926,28 +931,53 @@ button[type="submit"].dark-mode {
      
 <div id="videos">
     <!-- Vidéo d'accueil -->
+      <div id="welcomeVideo" class="categoryVideos">
+        <h2 class="video-title">Plateforme 2 2024!</h2>
+        <div class="video-container">
+            <iframe width="480" height="360" frameborder="0" src="https://mega.nz/embed/0mNRTb4B#SoOGO01u_4ypDbkK-H3q0wzSV8-6bhIUgTb3uz7QlKU" allowfullscreen ></iframe>
+
+            <!-- Conteneur pour l'image avec zoom -->
+            <div class="image-container">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f3657ac5-276b-a117-4a67-192814760ff1.jpg" alt="Votre description" class="zoomableImage">
+                <div class="bande-noire">
+                    👻OLDEST🇯🇲
+                    <br />                  
+                </div>            
+            </div>                
+        <div class="overlay" id="videoOverlay">
+                <button class="watch-button" id="watchButton" data-category="welcome">Regarder</button>
+</div>                
+    </div>       
+        <p class="description">Description : plateforme 2
+            
+         </p>
+        <div class="video-info">
+            <span class="views">5060 vues</span>
+            <span class="duration">3:45</span>
+        </div>
+        <div class="rating">
+            <span>Note : </span>
+            <span class="stars">★★★★☆</span>
+            <span class="user-review">Avis : Excellente vidéo, très instructive.</span>
+        </div>
+    </div>
+    
+    
+    
     <div id="welcomeVideo" class="categoryVideos">
         <h2 class="video-title">Godzilla x Kong 2024!</h2>
-<div class="video-container">
-    <iframe width="480" height="360" frameborder="0" src="https://mega.nz/embed/NncAHSDT#4d6GNuwvcaM94Nm2BB1FitQg3S_zOkIHptIImptLXMY" allowfullscreen></iframe>
+        <div class="video-container">
+            <iframe width="480" height="360" frameborder="0" src="https://mega.nz/embed/NncAHSDT#4d6GNuwvcaM94Nm2BB1FitQg3S_zOkIHptIImptLXMY" allowfullscreen ></iframe>
 
-    <!-- Conteneur pour l'image avec zoom -->
-    <div class="image-container">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/79120212-44be-35f7-a9db-f05a1554631c.jpeg" alt="Votre description" class="zoomableImage">
-        <div class="bande-noire">
-            👻OLDEST STRONG🇯🇲
-            <br />                  
-        </div>            
-    </div>   
-    
-
-
-<!-- Lien de partage -->
-<p>Partagez cette vidéo : 
-    <a href="https://lucious-lion04.github.io/flux/?video=godzillaKong" target="_blank">https://lucious-lion04.github.io/flux/?video=godzillaKong</a>
-</p>
-        
-     <div class="overlay" id="videoOverlay">
+            <!-- Conteneur pour l'image avec zoom -->
+            <div class="image-container">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/79120212-44be-35f7-a9db-f05a1554631c.jpeg" alt="Votre description" class="zoomableImage">
+                <div class="bande-noire">
+                    👻OLDEST🇯🇲
+                    <br />                  
+                </div>            
+            </div>                
+        <div class="overlay" id="videoOverlay">
                 <button class="watch-button" id="watchButton" data-category="welcome">Regarder</button>
 </div>                
     </div>       
@@ -964,9 +994,7 @@ button[type="submit"].dark-mode {
             <span class="user-review">Avis : Excellente vidéo, très instructive.</span>
         </div>
     </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() { const videoContainers = document.querySelectorAll('.video-container'); videoContainers.forEach(container => { container.addEventListener('click', function() { const videoLink = this.getAttribute('data-video-link'); // Copier le lien dans le presse-papiers navigator.clipboard.writeText(videoLink).then(function() { alert('Lien copié ! Vous pouvez maintenant le partager.'); }, function(err) { console.error('Erreur de copie : ', err); }); }); }); });
-</script>
+
 <div id="welcomeVideo" class="categoryVideos">
         <h2 class="video-title">STING 2024 !</h2>
         <div class="video-container">
@@ -1866,7 +1894,10 @@ document.getElementById("searchBtn").addEventListener("click", rechercherVideos)
     };
 });
     </script>
-    <script>    document.addEventListener("DOMContentLoaded", function () {
+
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
     const themeToggleButton = document.getElementById("theme-toggle");
     const body = document.body;
     const header = document.querySelector("header");
@@ -1900,3 +1931,5 @@ document.getElementById("searchBtn").addEventListener("click", rechercherVideos)
     
 </body>
 </html> 
+        
+
