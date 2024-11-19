@@ -832,7 +832,26 @@ button[type="submit"].dark-mode {
 }
 
 
-       
+   #popupMessage {
+    display: none; /* Masquée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+}
+
+#popupContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}    
     </style>
 </head>
 <body>     
@@ -1346,7 +1365,13 @@ Le Japon se remet à grand peine de la Seconde Guerre mondiale qu’un péril gi
         <button id="logoutButton" class="profile-button">Déconnexion</button>
     </div>
 
-
+<!-- Message pop-up séparé -->
+<div id="popupMessage" style="display: none;">
+    <div id="popupContent">
+        <p>Veuillez vous connecter ou vous inscrire pour accéder à la vidéo . </p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
 
     
      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
@@ -1927,6 +1952,17 @@ document.getElementById("searchBtn").addEventListener("click", rechercherVideos)
         });
     });
 });
+
+
+        // Affiche la pop-up quand on clique sur le bouton "Regarder"
+document.getElementById("watchButton").addEventListener("click", function() {
+    document.getElementById("popupMessage").style.display = "flex";
+});
+
+// Fonction pour fermer la pop-up
+function closePopup() {
+    document.getElementById("popupMessage").style.display = "none";
+}
     </script>
     
 </body>
